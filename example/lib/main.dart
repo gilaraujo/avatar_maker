@@ -197,7 +197,7 @@ class _NewPageState extends State<NewPage> {
                   },
                   lockWidget: Container(
                     decoration: BoxDecoration(
-                      color: Colors.red.withValues(alpha: 0.5),
+                      color: Colors.red.withAlpha(128),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Center(

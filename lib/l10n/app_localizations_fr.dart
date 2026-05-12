@@ -1,5 +1,7 @@
 import 'app_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for French (`fr`).
 class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
@@ -17,8 +19,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get property_category_eyebrows => 'Sourcils';
 
   @override
-  String get property_category_facial_hair_colors =>
-      'Couleurs de barbe et moustache';
+  String get property_category_facial_hair_colors => 'Couleurs de barbe et moustache';
 
   @override
   String get property_category_facial_hair_types => 'Barbes et moustaches';
