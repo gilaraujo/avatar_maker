@@ -32,12 +32,36 @@ class _MyHomePageState extends State<MyHomePage> {
   final AvatarMakerController _avatarMakerController =
       NonPersistentAvatarMakerController(customizedPropertyCategories: []);
 
+  Locale _currentLocale = const Locale("en");
+
+  void _toggleLocale() {
+    setState(() {
+      _currentLocale =
+          _currentLocale.languageCode == "en" ? const Locale("fr") : const Locale("en");
+    });
+    AvatarMakerController.setLocale(
+      _currentLocale,
+      controller: _avatarMakerController,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title!),
         centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: TextButton.icon(
+              onPressed: _toggleLocale,
+              icon: const Icon(Icons.language),
+              label: Text(_currentLocale.languageCode.toUpperCase()),
+              style: TextButton.styleFrom(foregroundColor: Colors.white),
+            ),
+          ),
+        ],
       ),
       body: ListView(
         physics: BouncingScrollPhysics(),

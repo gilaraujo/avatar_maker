@@ -41,17 +41,17 @@ abstract class AvatarMakerController extends ChangeNotifier {
   /// List of all the property categories merged (the one given by the user with
   /// the default one stored in the code). Useful to get the default value from
   /// property categories which are not updatable.
-  late final List<CustomizedPropertyCategory> propertyCategories;
+  late List<CustomizedPropertyCategory> propertyCategories;
 
   /// List of all the property categories which are updatable.
-  late final List<CustomizedPropertyCategory> displayedPropertyCategories;
+  late List<CustomizedPropertyCategory> displayedPropertyCategories;
 
   /// Map of all the default selected options for all property category
   /// (displayed or not).
   late final Map<PropertyCategoryIds, PropertyItem> defaultSelectedOptions;
 
   /// Localization instance to manage property categories displayed title.
-  late final AppLocalizations l10n;
+  late AppLocalizations l10n;
 
   /// Stores the option selected by the user for each attribute
   /// where the key represents the Attribute
@@ -60,6 +60,10 @@ abstract class AvatarMakerController extends ChangeNotifier {
   /// Eg: selectedOptions["eyes"] gives the index of
   /// the kind of eyes picked by the user
   late Map<PropertyCategoryIds, PropertyItem> selectedOptions;
+
+  /// Original customized property categories provided at construction time,
+  /// kept to allow locale rebuilds.
+  List<CustomizedPropertyCategory>? _customizedPropertyCategories;
 
   AvatarMakerController({
     List<CustomizedPropertyCategory>? customizedPropertyCategories,
@@ -70,6 +74,7 @@ abstract class AvatarMakerController extends ChangeNotifier {
     if (locale == null) {
       locale = Locale("en");
     }
+    _customizedPropertyCategories = customizedPropertyCategories;
     this.l10n = lookupAppLocalizations(locale);
     this.propertyCategories = PropertyCategoryService.mergePropertyCategories(
         customizedPropertyCategories ?? [], l10n);
@@ -87,6 +92,28 @@ abstract class AvatarMakerController extends ChangeNotifier {
 
     // Initialize the controller
     initController();
+  }
+
+  /// Updates the locale used by the controller and refreshes all category names.
+  ///
+  /// Only locales in [AppLocalizations.supportedLocales] are accepted.
+  /// If the locale is unsupported, the call is silently ignored.
+  ///
+  /// [controller] - The [AvatarMakerController] instance to update.
+  static void setLocale(Locale locale,
+      {required AvatarMakerController controller}) {
+    final isSupported = AppLocalizations.supportedLocales
+        .any((l) => l.languageCode == locale.languageCode);
+    if (!isSupported) return;
+
+    controller.l10n = lookupAppLocalizations(locale);
+    controller.propertyCategories =
+        PropertyCategoryService.mergePropertyCategories(
+            controller._customizedPropertyCategories ?? [], controller.l10n);
+    controller.displayedPropertyCategories = controller.propertyCategories
+        .where((category) => category.toDisplay)
+        .toList();
+    controller.notifyListeners();
   }
 
   AvatarMakerController.fromSvg(

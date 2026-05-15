@@ -1,0 +1,16 @@
+{
+  "@@locale": "fi",
+  "property_category_accessories": "Tarvikkeet",
+  "property_category_backgrounds": "Taustat",
+  "property_category_eyes": "Silmät",
+  "property_category_eyebrows": "Kulmakarvat",
+  "property_category_facial_hair_colors": "Kasvokarvojen värit",
+  "property_category_facial_hair_types": "Kasvokarvat",
+  "property_category_hair_colors": "Hiusvärit",
+  "property_category_hairstyles": "Hiustyylit",
+  "property_category_mouths": "Suut",
+  "property_category_noses": "Nenät",
+  "property_category_outfit_colors": "Asun värit",
+  "property_category_outfit_types": "Asut",
+  "property_category_skins": "Ihovärit"
+}

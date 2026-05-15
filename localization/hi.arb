@@ -1,0 +1,16 @@
+{
+  "@@locale": "hi",
+  "property_category_accessories": "सहायक उपकरण",
+  "property_category_backgrounds": "पृष्ठभूमि",
+  "property_category_eyes": "आँखें",
+  "property_category_eyebrows": "भौंहें",
+  "property_category_facial_hair_colors": "चेहरे के बालों के रंग",
+  "property_category_facial_hair_types": "चेहरे के बाल",
+  "property_category_hair_colors": "बालों के रंग",
+  "property_category_hairstyles": "केशविन्यास",
+  "property_category_mouths": "मुँह",
+  "property_category_noses": "नाक",
+  "property_category_outfit_colors": "पोशाक के रंग",
+  "property_category_outfit_types": "पोशाक",
+  "property_category_skins": "त्वचा"
+}

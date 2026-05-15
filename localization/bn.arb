@@ -1,0 +1,16 @@
+{
+  "@@locale": "bn",
+  "property_category_accessories": "আনুষাঙ্গিক",
+  "property_category_backgrounds": "পটভূমি",
+  "property_category_eyes": "চোখ",
+  "property_category_eyebrows": "ভ্রু",
+  "property_category_facial_hair_colors": "মুখের চুলের রং",
+  "property_category_facial_hair_types": "মুখের চুল",
+  "property_category_hair_colors": "চুলের রং",
+  "property_category_hairstyles": "চুলের ধরন",
+  "property_category_mouths": "মুখ",
+  "property_category_noses": "নাক",
+  "property_category_outfit_colors": "পোশাকের রং",
+  "property_category_outfit_types": "পোশাক",
+  "property_category_skins": "ত্বক"
+}

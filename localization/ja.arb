@@ -1,0 +1,16 @@
+{
+  "@@locale": "ja",
+  "property_category_accessories": "アクセサリー",
+  "property_category_backgrounds": "背景",
+  "property_category_eyes": "目",
+  "property_category_eyebrows": "眉毛",
+  "property_category_facial_hair_colors": "ひげの色",
+  "property_category_facial_hair_types": "ひげ",
+  "property_category_hair_colors": "髪の色",
+  "property_category_hairstyles": "髪型",
+  "property_category_mouths": "口",
+  "property_category_noses": "鼻",
+  "property_category_outfit_colors": "服の色",
+  "property_category_outfit_types": "服装",
+  "property_category_skins": "肌の色"
+}

@@ -1,0 +1,16 @@
+{
+  "@@locale": "th",
+  "property_category_accessories": "อุปกรณ์เสริม",
+  "property_category_backgrounds": "พื้นหลัง",
+  "property_category_eyes": "ดวงตา",
+  "property_category_eyebrows": "คิ้ว",
+  "property_category_facial_hair_colors": "สีขนบนใบหน้า",
+  "property_category_facial_hair_types": "ขนบนใบหน้า",
+  "property_category_hair_colors": "สีผม",
+  "property_category_hairstyles": "ทรงผม",
+  "property_category_mouths": "ปาก",
+  "property_category_noses": "จมูก",
+  "property_category_outfit_colors": "สีชุด",
+  "property_category_outfit_types": "ชุด",
+  "property_category_skins": "สีผิว"
+}

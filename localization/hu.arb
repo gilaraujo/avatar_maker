@@ -1,0 +1,16 @@
+{
+  "@@locale": "hu",
+  "property_category_accessories": "Kiegészítők",
+  "property_category_backgrounds": "Hátterek",
+  "property_category_eyes": "Szemek",
+  "property_category_eyebrows": "Szemöldökök",
+  "property_category_facial_hair_colors": "Arcszőrzet színek",
+  "property_category_facial_hair_types": "Arcszőrzet",
+  "property_category_hair_colors": "Hajszínek",
+  "property_category_hairstyles": "Frizurák",
+  "property_category_mouths": "Szájak",
+  "property_category_noses": "Orrok",
+  "property_category_outfit_colors": "Ruha színek",
+  "property_category_outfit_types": "Ruhák",
+  "property_category_skins": "Bőrszínek"
+}

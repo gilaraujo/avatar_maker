@@ -1,0 +1,16 @@
+{
+  "@@locale": "id",
+  "property_category_accessories": "Aksesori",
+  "property_category_backgrounds": "Latar Belakang",
+  "property_category_eyes": "Mata",
+  "property_category_eyebrows": "Alis",
+  "property_category_facial_hair_colors": "Warna Rambut Wajah",
+  "property_category_facial_hair_types": "Rambut Wajah",
+  "property_category_hair_colors": "Warna Rambut",
+  "property_category_hairstyles": "Gaya Rambut",
+  "property_category_mouths": "Mulut",
+  "property_category_noses": "Hidung",
+  "property_category_outfit_colors": "Warna Pakaian",
+  "property_category_outfit_types": "Pakaian",
+  "property_category_skins": "Warna Kulit"
+}

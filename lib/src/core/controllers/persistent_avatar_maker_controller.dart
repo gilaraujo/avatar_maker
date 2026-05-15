@@ -1,3 +1,4 @@
+import "package:avatar_maker/l10n/app_localizations.dart";
 import "package:avatar_maker/src/core/controllers/avatar_maker_controller.dart";
 import "package:avatar_maker/src/core/enums/preferences_label.dart";
 import "package:avatar_maker/src/core/enums/property_category_ids.dart";
@@ -114,6 +115,17 @@ class PersistentAvatarMakerController extends AvatarMakerController {
   static void setJsonOptions(String jsonAvatarOptions,
       {required PersistentAvatarMakerController controller}) {
     controller.saveAvatarSVG(jsonAvatarOptions: jsonAvatarOptions);
+  }
+
+  /// Dynamically update the locale used by the controller.
+  ///
+  /// Only locales in [AppLocalizations.supportedLocales] are accepted.
+  /// If the locale is unsupported, the call is silently ignored.
+  ///
+  /// [controller] - The [PersistentAvatarMakerController] instance to update.
+  static void setLocale(Locale locale,
+      {required PersistentAvatarMakerController controller}) {
+    AvatarMakerController.setLocale(locale, controller: controller);
   }
 
   /// Extract the current avatar SVG for an external save.

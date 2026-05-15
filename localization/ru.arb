@@ -1,0 +1,16 @@
+{
+  "@@locale": "ru",
+  "property_category_accessories": "Аксессуары",
+  "property_category_backgrounds": "Фоны",
+  "property_category_eyes": "Глаза",
+  "property_category_eyebrows": "Брови",
+  "property_category_facial_hair_colors": "Цвета растительности на лице",
+  "property_category_facial_hair_types": "Растительность на лице",
+  "property_category_hair_colors": "Цвета волос",
+  "property_category_hairstyles": "Причёски",
+  "property_category_mouths": "Рты",
+  "property_category_noses": "Носы",
+  "property_category_outfit_colors": "Цвета одежды",
+  "property_category_outfit_types": "Одежда",
+  "property_category_skins": "Оттенки кожи"
+}
