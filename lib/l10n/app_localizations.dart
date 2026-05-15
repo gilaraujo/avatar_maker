@@ -148,6 +148,7 @@ abstract class AppLocalizations {
     Locale('nl'),
     Locale('pl'),
     Locale('pt'),
+    Locale('pt', 'BR'),
     Locale('ro'),
     Locale('ru'),
     Locale('sk'),
@@ -292,7 +293,7 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'nb': return AppLocalizationsNb();
     case 'nl': return AppLocalizationsNl();
     case 'pl': return AppLocalizationsPl();
-    case 'pt': return AppLocalizationsPt();
+    case 'pt': return locale.countryCode == 'BR' ? AppLocalizationsPtBr() : AppLocalizationsPt();
     case 'ro': return AppLocalizationsRo();
     case 'ru': return AppLocalizationsRu();
     case 'sk': return AppLocalizationsSk();
