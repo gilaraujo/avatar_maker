@@ -33,7 +33,6 @@ class AvatarService {
     <g id="AvatarMaker" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-825.000000, -1100.000000)" id="avatar_maker/Circle">
             <g transform="translate(825.000000, 1100.000000)">
-                $backgroundStyle
                 <g id="Mask"></g>
                 <g id="AvatarMaker" stroke-width="1" fill-rule="evenodd">
                     <g id="Body" transform="translate(32.000000, 36.000000)">
@@ -84,15 +83,6 @@ class AvatarService {
       PropertyCategoryIds.HairStyle: HairStyles.Bald,
       PropertyCategoryIds.HairColor: HairColors.Black,
     };
-
-    // Extract background style
-    // Check for Circle background first (more specific)
-    if (svg.contains(BackgroundStyles.Circle.value.trim())) {
-      result[PropertyCategoryIds.Background] = BackgroundStyles.Circle;
-    } else {
-      // Default to Transparent if Circle is not found
-      result[PropertyCategoryIds.Background] = BackgroundStyles.Transparent;
-    }
 
     final Map<PropertyCategoryIds, List<PropertyItem>> properties = {
       PropertyCategoryIds.Background: BackgroundStyles.values,

@@ -261,6 +261,10 @@ class _NewPageState extends State<NewPage> {
                   },
                 ),
               ),
+              TextButton(
+                onPressed: () => AvatarMakerController.setLocale(Locale("pt", "BR"), controller: widget.controller),
+                child: Text("OK"),
+              ),
             ],
           ),
         ),

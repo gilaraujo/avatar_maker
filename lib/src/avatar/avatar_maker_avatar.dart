@@ -38,26 +38,27 @@ class AvatarMakerAvatar extends StatelessWidget {
         PersistentAvatarMakerController(customizedPropertyCategories: []);
     final loader = progressIndicator ?? CircularProgressIndicator.adaptive();
 
-    return CircleAvatar(
-        radius: radius,
-        backgroundColor: backgroundColor,
-        child: ListenableBuilder(
-          listenable: avatarController,
-          builder: (context, child) {
-            /// Returns an activity indicator if the initialization of the
-            /// controller isn't fully done.
-            if (avatarController.displayedAvatarSVG.isEmpty) {
-              return loader;
-            }
-            return SvgPicture.string(
-              avatarController.drawAvatarSVG(),
-              height: radius * 1.6,
-              semanticsLabel: "Your avatar",
-              placeholderBuilder: (context) => Center(
-                child: loader,
-              ),
-            );
-          },
-        ));
+    return ListenableBuilder(
+      listenable: avatarController,
+      builder: (context, child) {
+        /// Returns an activity indicator if the initialization of the
+        /// controller isn't fully done.
+        if (avatarController.displayedAvatarSVG.isEmpty) {
+          return loader;
+        }
+        return CircleAvatar(
+            radius: radius,
+            backgroundColor: avatarController.backgroundColor(),
+            child: SvgPicture.string(
+                avatarController.drawAvatarSVG(),
+                height: radius * 1.6,
+                semanticsLabel: "Your avatar",
+                placeholderBuilder: (context) => Center(
+                  child: loader,
+                ),
+              )
+        );
+      }
+    );
   }
 }

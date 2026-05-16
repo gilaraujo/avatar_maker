@@ -132,6 +132,18 @@ abstract class AvatarMakerController extends ChangeNotifier {
     notifyListeners();
   }
 
+  Color backgroundColor() {
+    return hexToColor(selectedOptions.entries.where((e) => e.key == PropertyCategoryIds.Background).firstOrNull?.value.label ?? "FFFFFF");
+  }
+  Color hexToColor(String hexString) {
+    // Remove the '#' if it exists
+    final buffer = StringBuffer();
+    if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
+    buffer.write(hexString.replaceFirst('#', ''));
+
+    // Parse the string to an integer
+    return Color(int.parse(buffer.toString(), radix: 16));
+  }
   /// Get the selected options. This method should be implemented by subclasses
   /// to provide the appropriate options retrieval strategy.
   Future<Map<PropertyCategoryIds, PropertyItem>> getSelectedOptions();

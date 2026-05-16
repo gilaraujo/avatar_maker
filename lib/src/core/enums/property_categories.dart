@@ -33,7 +33,7 @@ final PropertyCategory Background = PropertyCategory(
   },
   iconFile: "assets/icons/background.svg",
   properties: BackgroundStyles.values,
-  toDisplay: false,
+  toDisplay: true,
   defaultValue: BackgroundStyles.Transparent,
 );
 final PropertyCategory EyebrowType = PropertyCategory(
