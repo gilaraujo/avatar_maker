@@ -3,10 +3,10 @@ import "package:avatar_maker/src/core/models/property_item.dart";
 /// List of all the background styles displayed by default.
 enum BackgroundStyles implements PropertyItem {
   Transparent(""),
-  PastelBlue("#65C9FF"),
   Mint("#A0E7A0"),
   Lavender("#C6A4FF"),
   Peach("#FFC4A3"),
+  PastelBlue("#65C9FF"),
   SoftYellow("#FFF5A3"),
   Teal("#7AE7C7"),
   Coral("#FF8674"),
