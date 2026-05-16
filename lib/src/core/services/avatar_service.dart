@@ -70,9 +70,9 @@ class AvatarService {
     // Initialize with default values
     Map<PropertyCategoryIds, PropertyItem> result = {
       PropertyCategoryIds.Background: BackgroundStyles.Transparent,
-      PropertyCategoryIds.SkinColor: SkinColors.Brown,
-      PropertyCategoryIds.OutfitType: OutfitTypes.Hoodie,
-      PropertyCategoryIds.OutfitColor: OutfitColors.PastelBlue,
+      PropertyCategoryIds.SkinColor: SkinColors.White,
+      PropertyCategoryIds.OutfitType: OutfitTypes.CollarSweater,
+      PropertyCategoryIds.OutfitColor: OutfitColors.LightBlue,
       PropertyCategoryIds.FacialHairType: FacialHairTypes.Nothing,
       PropertyCategoryIds.FacialHairColor: FacialHairColors.Black,
       PropertyCategoryIds.MouthType: Mouths.Default,

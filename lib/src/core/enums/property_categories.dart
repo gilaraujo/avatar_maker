@@ -124,7 +124,7 @@ final PropertyCategory OutfitColor = PropertyCategory(
   iconFile: "assets/icons/outfit_color.svg",
   properties: OutfitColors.values,
   toDisplay: true,
-  defaultValue: OutfitColors.PastelBlue,
+  defaultValue: OutfitColors.LightBlue,
 );
 final PropertyCategory OutfitType = PropertyCategory(
   id: PropertyCategoryIds.OutfitType,
@@ -134,7 +134,7 @@ final PropertyCategory OutfitType = PropertyCategory(
   iconFile: "assets/icons/outfit.svg",
   properties: OutfitTypes.values,
   toDisplay: true,
-  defaultValue: OutfitTypes.Hoodie,
+  defaultValue: OutfitTypes.CollarSweater,
 );
 final PropertyCategory SkinColor = PropertyCategory(
   id: PropertyCategoryIds.SkinColor,
@@ -144,7 +144,7 @@ final PropertyCategory SkinColor = PropertyCategory(
   iconFile: "assets/icons/skin.svg",
   properties: SkinColors.values,
   toDisplay: true,
-  defaultValue: SkinColors.Brown,
+  defaultValue: SkinColors.White,
 );
 
 // List of all the default property categories. The order here represents the
