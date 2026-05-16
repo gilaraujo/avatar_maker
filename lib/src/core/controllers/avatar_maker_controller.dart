@@ -133,9 +133,10 @@ abstract class AvatarMakerController extends ChangeNotifier {
   }
 
   Color backgroundColor() {
-    return hexToColor(selectedOptions.entries.where((e) => e.key == PropertyCategoryIds.Background).firstOrNull?.value.label ?? "FFFFFF");
+    return hexToColor(selectedOptions.entries.where((e) => e.key == PropertyCategoryIds.Background).firstOrNull?.value.value ?? "");
   }
   Color hexToColor(String hexString) {
+    if (hexString.isEmpty) return Colors.transparent;
     // Remove the '#' if it exists
     final buffer = StringBuffer();
     if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
@@ -245,7 +246,7 @@ abstract class AvatarMakerController extends ChangeNotifier {
         return AccessoryService.drawSVG(accessory: item.value);
 
       case PropertyCategoryIds.Background:
-        return BackgroundService.drawSVG(background: item.value);
+        return ColorService.drawSVG(hexColorCode: item.value);
 
       case PropertyCategoryIds.EyebrowType:
         return EyebrowService.drawSVG(eyebrow: item.value);

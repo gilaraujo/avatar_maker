@@ -30,7 +30,7 @@ class OptionsService {
               propertyCategories, categoryId)
           .properties!
           .firstWhere(
-            (property) => property.toString().split(".").last == value,
+            (property) => property.label == value,
           );
       selectedOptions.putIfAbsent(categoryId, () => item);
     });
